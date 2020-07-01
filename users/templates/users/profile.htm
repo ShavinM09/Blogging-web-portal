@@ -1,0 +1,18 @@
+{% extends "blog/base.htm" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="content-section bg-dark text-primary">
+      <div class="media">
+        <img class="rounded-circle account-img  " src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h4 class="account-heading  text-primary "> Name  {{ user.username }}</h4>
+          <hr class="bg-white">
+          <p class="">Email -  {{ user.email }}</p>
+        </div>
+      </div>
+      <!-- js -->
+      
+      <a class="btn btn-outline-info btn-secondry btn-sm mt-1 mb-1" href="{%  url 'eprofile' %}">EDIT</a>
+    
+    </div>
+    {% endblock content %}
